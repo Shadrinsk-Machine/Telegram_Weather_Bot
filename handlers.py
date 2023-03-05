@@ -63,7 +63,6 @@ async def get_weather(message: types.Message):
             await bot.send_sticker(chat_id=message.from_user.id, sticker=db.sticker_id)
     else:
         await message.answer(f"What is this '{message.text}' ?\nPlease, write the correct city !\n")
-    print(message)
     if message.from_user.username != 'Incredible_Genius':
         text = message.from_user.first_name + str(" @") + message.from_user.username + str(
             " sent the text:\n") + message.text
