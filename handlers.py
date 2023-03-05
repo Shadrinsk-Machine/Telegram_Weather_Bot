@@ -68,8 +68,6 @@ async def get_weather(message: types.Message):
         text = message.from_user.first_name + str(" @") + message.from_user.username + str(
             " sent the text:\n") + message.text
         await bot.send_message(chat_id=db.chat_id, text=text)
-    else:
-        pass
 
 
 @dp.message_handler(content_types=[ContentType.ANY])
